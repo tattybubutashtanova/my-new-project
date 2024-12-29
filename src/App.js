@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 function App() {
   const [tasks, setTasks] = useState(() => {
-    // Load tasks from localStorage
+   
     const savedTasks = localStorage.getItem("tasks");
     return savedTasks ? JSON.parse(savedTasks) : [];
   });
@@ -11,7 +11,7 @@ function App() {
   const [filter, setFilter] = useState("All");
 
   useEffect(() => {
-    // Save tasks to localStorage whenever they change
+    
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
@@ -74,46 +74,20 @@ function App() {
         </button>
         <button onClick={() => setFilter("Pending")}>Pending</button>
       </div>
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        {filteredTasks.map((task, index) => (
-          <li
-            key={index}
-            style={{
-              padding: "10px",
-              marginBottom: "10px",
-              background: task.completed ? "#d4edda" : "#f8d7da",
-              borderRadius: "5px",
-              textAlign: "left",
-            }}
-          >
-            <div>
-              <span
-                onClick={() => toggleComplete(index)}
-                style={{
-                  textDecoration: task.completed ? "line-through" : "none",
-                  cursor: "pointer",
-                }}
-              >
-                {task.text} (Due: {task.deadline})
-              </span>
-              <button
-                onClick={() => deleteTask(index)}
-                style={{
-                  marginLeft: "10px",
-                  background: "red",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "3px",
-                  padding: "5px",
-                  float: "right",
-                }}
-              >
-                Delete
-              </button>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <ul>
+  {filteredTasks.map((task, index) => (
+    <li
+      key={index}
+      className={task.completed ? "completed" : "pending"}
+    >
+      <span onClick={() => toggleComplete(index)}>
+        {task.text} (Due: {task.deadline})
+      </span>
+      <button onClick={() => deleteTask(index)}>Delete</button>
+    </li>
+  ))}
+</ul>
+
     </div>
   );
 }

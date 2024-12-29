@@ -7,4 +7,96 @@ body {
 
 h1 {
   color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="date"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:focus {
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li.completed {
+  background-color: #d4edda;
+  text-decoration: line-through;
+  color: #155724;
+}
+
+li.pending {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+li span {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+li button {
+  background-color: #dc3545;
+  color: white;
+}
+
+li button:hover {
+  background-color: #a71d2a;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.filters button {
+  background-color: #17a2b8;
+  color: white;
+  margin-right: 10px;
+}
+
+.filters button:hover {
+  background-color: #117a8b;
 }
