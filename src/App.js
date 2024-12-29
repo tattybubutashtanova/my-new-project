@@ -77,14 +77,15 @@ function App() {
       <ul>
   {filteredTasks.map((task, index) => (
     <li
-      key={index}
-      className={task.completed ? "completed" : "pending"}
-    >
-      <span onClick={() => toggleComplete(index)}>
-        {task.text} (Due: {task.deadline})
-      </span>
-      <button onClick={() => deleteTask(index)}>Delete</button>
-    </li>
+    key={index}
+    className={task.completed ? "completed" : "pending"}
+  >
+    <span onClick={() => toggleComplete(index)}>
+      {task.text} (Due: {task.deadline})
+    </span>
+    <button onClick={() => deleteTask(index)}>Delete</button>
+  </li>
+  
   ))}
 </ul>
 
