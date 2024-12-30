@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# TO DO App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This is the backend service for the **My To-Do App**, which provides RESTful API endpoints for managing tasks, including creating, retrieving, updating, and deleting tasks. The frontend is built using React and communicates with this Spring Boot backend.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Frontend Information
+- **GitHub Repository Link:** [Frontend Repo](https://github.com/tattybubutashtanova/backend-repo.git)
+- **Deployed Frontend Link:** [Vercel Live Demo](https://my-new-project-cecu.vercel.app/)
+- **YouTube Demo:** [How It Works - Frontend](https://youtu.be/_GiP5biiLs4)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Backend Information
+- **GitHub Repository Link:** [Backend Repo](https://github.com/tattybubutashtanova/backend-repo.git)
+- **Deployed Backend Link:** [Railway API Endpoint](https://backend-repo-production-a6a1.up.railway.app/api/tasks)
+- **YouTube Demo:** [How It Works - Backend](https://youtu.be/Aqi9MVsb1io)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
+- Create new tasks with a title, deadline, and priority.
+- Retrieve all tasks with sorting and filtering capabilities.
+- Edit tasks to update details like title or priority.
+- Delete tasks when completed or no longer needed.
+- Persistent task storage through the backend API.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Technologies Used
+### Frontend:
+- React.js
+- Axios for API communication
+- LocalStorage for temporary data persistence
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend:
+- Spring Boot
+- H2 Database for local development
+- REST API
+- Railway for deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup Instructions
+### Backend
+1. Clone the backend repository:
+   ```bash
+   git clone https://github.com/tattybubutashtanova/backend-repo.git
+   cd backend-repo
+   ```
+2. Run the backend application:
+   - **With Gradle:**
+     ```bash
+     ./gradlew bootRun
+     ```
+   - **With Maven:**
+     ```bash
+     ./mvnw spring-boot:run
+     ```
+3. Access the API at:
+   ```
+   http://localhost:8080/api/tasks
+   ```
 
-### `npm run eject`
+### Frontend
+1. Clone the frontend repository:
+   ```bash
+   git clone https://github.com/tattybubutashtanova/backend-repo.git
+   cd frontend-repo
+   ```
+2. Install dependencies and start the app:
+   ```bash
+   npm install
+   npm start
+   ```
+3. Access the app at:
+   ```
+   http://localhost:3000
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage Instructions
+1. Open the frontend application.
+2. Add tasks by entering a title, selecting a deadline, and choosing a priority.
+3. View all tasks fetched from the backend API.
+4. Sort tasks by date or priority using the provided buttons.
+5. Edit or delete tasks as needed.
+6. Search for tasks using the search bar.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Additional Information
+### Testing Endpoints:
+You can test the backend API using Postman or any other tool:
+- **Get All Tasks:** `GET /api/tasks`
+- **Create a Task:** `POST /api/tasks`
+- **Update a Task:** `PUT /api/tasks/{id}`
+- **Delete a Task:** `DELETE /api/tasks/{id}`
 
-## Learn More
+### Known Issues:
+- API requires CORS settings to be enabled for localhost development.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Contributors:
+- **Tattybubu Tashtanova**
